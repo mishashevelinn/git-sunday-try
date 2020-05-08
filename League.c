@@ -4,7 +4,6 @@
 
 #include "Team.h"
 #include "Match.h"
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "League.h"
@@ -17,6 +16,8 @@ League *LeagueCreate() {
         printf("Failed to allocate %lu bytes\n", sizeof(League));
         exit(1);
     }
+    league->teams = (Team **) malloc(sizeof(Team));
+    league->matches = (Match **) malloc(sizeof(Match));
     return league;
 }
 
@@ -27,24 +28,22 @@ void LeagueDestroy(League *league) {
 void read_teams(League *league, const char *file_name) {
     league->teams = NULL;
     league->numTeams = 0;
+    char *line = NULL;
+    size_t size = 0;
+    size_t len = 0;
     FILE *fp = fopen(file_name, "r");
     if (!fp) {
         fprintf(stderr, "error in line %d, failed to open a file\n", __LINE__);
         exit(-1);
     }
-    char *line = NULL;
-    size_t size = 0;
-    size_t len = 0;
-
-    while ((len = getline(&line, &size, fp)) != EOF) {
+    while ((getline(&line, &size, fp)) != EOF) {
         line[len - 1] = 0;
-        league->teams = (Team **) realloc(league->teams, sizeof(Team)*league->numTeams);
+        league->teams = (Team **) realloc(league->teams, sizeof(Team)*(league->numTeams));
         league->teams[league->numTeams] = TeamCreate(line);
         league->numTeams++;
     }
-    league->numTeams--;
-    fclose(fp);
 }
+
 
 void read_matches(League *league, const char *file_name) {
     league->matches = NULL;
