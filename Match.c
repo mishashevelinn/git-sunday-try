@@ -34,16 +34,16 @@ bool team_participated(Match *match, Team *team) {
 bool match_tied(Match* match){
     return match->goalGuest==match->goalHost;
 }
-bool team_won(Match* match, Team* team){
+bool team_won(Match* match, Team* team){ //TODO Check the logic here!!!
     if(!team_participated(match, team)){
         printf("Error in file %s, line %d\n", __FILE__, __LINE__);
         printf("Team %s has not participated in match\n", team->TeamName);
         exit(-1);
     }
-    if(match->teamHost>match->teamGuest){
-        return team == match->teamHost;
+    if(match->teamHost.){//comparing structs not goals! and return false when true
+        return true;
     }
-    else if(match->teamGuest>match->teamHost){
+    else if(match->goalHost>match->goalGuest){
         return team == match->teamGuest;
     }
     return false;

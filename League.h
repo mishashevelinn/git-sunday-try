@@ -30,7 +30,7 @@ int num_wins(League *league, Team *t);
 int num_draws(League *league, Team *t);
 
 int num_losses(League *league, Team *t);
-
+//returns number of matches given team participated in
 int num_matches(League *league, Team *t);
 
 int num_GF(League *league, Team *t);

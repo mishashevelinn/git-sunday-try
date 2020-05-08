@@ -26,6 +26,7 @@ int main() {
                liga1->matches[i]->goalHost, liga1->matches[i]->goalGuest);
     }
     printf("\n\n");
+    printf("%s, played %d games",liga1->teams[0]->TeamName, num_matches(liga1, liga1->teams[0]));
     sort_league(liga1);
     for (int i = 0; i < (liga1->num_matches); i++) {
         printf("Match%d %s against %s - %d:%d\n", i + 1, liga1->matches[i]->teamHost->TeamName,
