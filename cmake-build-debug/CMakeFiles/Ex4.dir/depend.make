@@ -17,4 +17,11 @@ CMakeFiles/Ex4.dir/main.c.o: ../League.h
 CMakeFiles/Ex4.dir/main.c.o: ../Match.h
 CMakeFiles/Ex4.dir/main.c.o: ../Team.h
 CMakeFiles/Ex4.dir/main.c.o: ../main.c
+CMakeFiles/Ex4.dir/main.c.o: ../sort-league.h
+
+CMakeFiles/Ex4.dir/sort-league.c.o: ../League.h
+CMakeFiles/Ex4.dir/sort-league.c.o: ../Match.h
+CMakeFiles/Ex4.dir/sort-league.c.o: ../Team.h
+CMakeFiles/Ex4.dir/sort-league.c.o: ../sort-league.c
+CMakeFiles/Ex4.dir/sort-league.c.o: ../sort-league.h
 

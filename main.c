@@ -1,8 +1,10 @@
 
 #include <stdio.h>
-#include <stdlib.h>
-
+#include "sort-league.h"
+#include "Team.h"
+#include "Match.h"
 #include "League.h"
+
 
 
 int main() {
@@ -14,14 +16,22 @@ int main() {
 
     League *liga1 = LeagueCreate();
     read_teams(liga1, "teams.txt");
-    for (int i = 0; i < liga1->numTeams; i++) {
+    for (int i = 0; i < liga1->num_teams; i++) {
         printf("Team: %s\n", (liga1->teams[i]->TeamName));
     }
     read_matches(liga1, "matches.txt");
-    for (int i = 0; i < (liga1->numMatches); i++) {
+    for (int i = 0; i < (liga1->num_matches); i++) {
         printf("Match%d %s against %s - %d:%d\n", i + 1, liga1->matches[i]->teamHost->TeamName,
                liga1->matches[i]->teamGuest->TeamName,
                liga1->matches[i]->goalHost, liga1->matches[i]->goalGuest);
+    }
+    printf("\n\n");
+    sort_league(liga1);
+    for (int i = 0; i < (liga1->num_matches); i++) {
+        printf("Match%d %s against %s - %d:%d\n", i + 1, liga1->matches[i]->teamHost->TeamName,
+               liga1->matches[i]->teamGuest->TeamName,
+               liga1->matches[i]->goalHost, liga1->matches[i]->goalGuest);
+
     }
     return 0;
 }

@@ -99,6 +99,12 @@
 		<Unit filename="/home/misha/CLionProjects/tal-git/main.c">
 			<Option target="Ex4"/>
 		</Unit>
+		<Unit filename="/home/misha/CLionProjects/tal-git/sort-league.c">
+			<Option target="Ex4"/>
+		</Unit>
+		<Unit filename="/home/misha/CLionProjects/tal-git/sort-league.h">
+			<Option target="Ex4"/>
+		</Unit>
 		<Unit filename="/home/misha/CLionProjects/tal-git/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

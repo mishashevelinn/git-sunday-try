@@ -38,7 +38,7 @@ void LeagueDestroy(League *league) {
 
 void read_teams(League *league, const char *file_name) {
     league->teams = NULL;
-    league->numTeams = 0;
+    league->num_teams = 0;
     char *line = NULL;
     size_t size = 0;
     size_t len = 0;
@@ -49,35 +49,35 @@ void read_teams(League *league, const char *file_name) {
     }
     while ((len = getline(&line, &size, fp)) != EOF) {
         line[len - 1] = 0;
-        league->teams = (Team **) realloc(league->teams, sizeof(Team)*(league->numTeams));
-        league->teams[league->numTeams] = TeamCreate(line);
-        league->numTeams++;
+        league->teams = (Team **) realloc(league->teams, sizeof(Team) * (league->num_teams));
+        league->teams[league->num_teams] = TeamCreate(line);
+        league->num_teams++;
     }
 }
 
 
 void read_matches(League *league, const char *file_name) {
     league->matches = NULL;
-    league->numMatches = 0;
+    league->num_matches = 0;
     FILE *fp = fopen(file_name, "r");
     if (!fp) {
         fprintf(stderr, "error in line %d, failed to open a file\n", __LINE__);
         exit(-1);
     }
     size_t len = 0;
-    char ptrH[30];
-    char ptrG[30];
+    char ptrH[10];
+    char ptrG[10];
     int goalH = -1;
     int goalG = -1;
     while ((len = fscanf(fp, "%s\t%s\t%d\t%d", ptrH, ptrG, &goalH, &goalG)) != EOF) {
         if (len != 4) {
-            printf("line %d in file is not in expected format", league->numMatches + 1);
+            printf("line %d in file is not in expected format", league->num_matches + 1);
             exit(1);
         }
-        league->matches = (Match **) realloc(league->matches, sizeof(Match)*league->numMatches);
+        league->matches = (Match **) realloc(league->matches, sizeof(Match) * league->num_matches);
         Team *teamH = NULL;
         Team *teamG = NULL;
-        for (int i = 0; i < league->numTeams; i++) {
+        for (int i = 0; i < league->num_teams; i++) {
             if (!strcmp((league->teams[i]->TeamName), ptrH)) {
                 teamH = league->teams[i];
             } else if (!strcmp((league->teams[i]->TeamName), ptrG)) {
@@ -87,10 +87,67 @@ void read_matches(League *league, const char *file_name) {
                 break;
             }
         }
-        //printf("H: %s, G: %s----> %d:%d\n", teamH->TeamName, teamG->TeamName, goalH, goalG);
-        league->matches[league->numMatches] = MatchCreate(teamH, teamG, goalH, goalG);
-        //printf("%s\n", league->matches[league->numMatches]->teamHost->TeamName);
-        league->numMatches++;
+
+        league->matches[league->num_matches] = MatchCreate(teamH, teamG, goalH, goalG);
+        league->num_matches++;
     }
-    //printf("%s\n", league->matches[0]->teamHost->TeamName);
+
+
 }
+
+int num_wins(League *league, Team *team){
+    int counter =0;
+    for (int i = 0; i <league->num_matches ; ++i) {
+        if(team_participated(league->matches[i], team)&&team_won(league->matches[i], team)){
+            counter++;
+        }
+    }return counter;
+}
+
+int num_draws(League *league, Team *t){
+    int counter =0;
+    for (int i = 0; i <league->num_matches ; ++i) {
+        if(team_participated(league->matches[i], t) && match_tied(league->matches[i])){
+            counter++;
+        }
+    }return counter;
+}
+
+int num_losses(League *league, Team *team){
+    int counter =0;
+    for (int i = 0; i <league->num_matches ; ++i) {
+        if(team_participated(league->matches[i], team)&&team_lost(league->matches[i], team)){
+            counter++;
+        }
+    }return counter;
+}
+
+int num_matches(League *league, Team *team){
+    int counter =0;
+    for (int i = 0; i <league->num_matches ; ++i) {
+        if(team_participated(league->matches[i], team)){
+            counter++;
+        }
+    }return counter;
+
+}
+
+int num_GF(League *league, Team *team){
+    int counter =0;
+    for (int i = 0; i <league->num_matches ; ++i) {
+        if(team_participated(league->matches[i], team)){
+            counter+=GF(league->matches[i], team);
+        }
+    }return counter;
+}
+
+int num_GA(League *league, Team *team) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], team)) {
+            counter += GA(league->matches[i], team);
+        }
+    }
+    return counter;
+}
+

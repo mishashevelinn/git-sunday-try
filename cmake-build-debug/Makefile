@@ -231,6 +231,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/Ex4.dir/build.make CMakeFiles/Ex4.dir/main.c.s
 .PHONY : main.c.s
 
+sort-league.o: sort-league.c.o
+
+.PHONY : sort-league.o
+
+# target to build an object file
+sort-league.c.o:
+	$(MAKE) -f CMakeFiles/Ex4.dir/build.make CMakeFiles/Ex4.dir/sort-league.c.o
+.PHONY : sort-league.c.o
+
+sort-league.i: sort-league.c.i
+
+.PHONY : sort-league.i
+
+# target to preprocess a source file
+sort-league.c.i:
+	$(MAKE) -f CMakeFiles/Ex4.dir/build.make CMakeFiles/Ex4.dir/sort-league.c.i
+.PHONY : sort-league.c.i
+
+sort-league.s: sort-league.c.s
+
+.PHONY : sort-league.s
+
+# target to generate assembly for a file
+sort-league.c.s:
+	$(MAKE) -f CMakeFiles/Ex4.dir/build.make CMakeFiles/Ex4.dir/sort-league.c.s
+.PHONY : sort-league.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sort-league.o"
+	@echo "... sort-league.i"
+	@echo "... sort-league.s"
 .PHONY : help
 
 

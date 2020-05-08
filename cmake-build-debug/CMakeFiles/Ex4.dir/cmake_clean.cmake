@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ex4.dir/Match.c.o"
   "CMakeFiles/Ex4.dir/Team.c.o"
   "CMakeFiles/Ex4.dir/main.c.o"
+  "CMakeFiles/Ex4.dir/sort-league.c.o"
   "Ex4"
   "Ex4.pdb"
 )
