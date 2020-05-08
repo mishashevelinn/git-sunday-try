@@ -1,12 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex4.dir/League.c.obj"
-  "CMakeFiles/Ex4.dir/Match.c.obj"
-  "CMakeFiles/Ex4.dir/Team.c.obj"
-  "CMakeFiles/Ex4.dir/main.c.obj"
-  "Ex4.exe"
-  "Ex4.exe.manifest"
+  "CMakeFiles/Ex4.dir/League.c.o"
+  "CMakeFiles/Ex4.dir/Match.c.o"
+  "CMakeFiles/Ex4.dir/Team.c.o"
+  "CMakeFiles/Ex4.dir/main.c.o"
+  "Ex4"
   "Ex4.pdb"
-  "libEx4.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
