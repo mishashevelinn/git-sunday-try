@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Team.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7ec3e6;}
+.s1 { color: #ebebeb;}
+.s2 { color: #a9b837;}
+.s3 { color: #54b33e;}
+.s4 { color: #ed864a;}
+.s5 { color: #ed864a; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Team.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by tal5s on 05/05/2020.</span>
+<span class="s0">//</span>
+<span class="s2">#include </span><span class="s3">&lt;stdio.h&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;stdlib.h&gt;</span>
+<span class="s2">#ifndef </span><span class="s1">EX4_TEAM_H</span>
+<span class="s2">#define </span><span class="s1">EX4_TEAM_H</span>
+
+
+<span class="s4">typedef struct </span><span class="s1">{</span>
+    <span class="s4">const char</span><span class="s1">* TeamName</span><span class="s5">;</span>
+<span class="s1">} Team</span><span class="s5">;</span>
+<span class="s1">Team * TeamCreate (</span><span class="s4">const char</span><span class="s1">* name)</span><span class="s5">;</span>
+
+<span class="s4">void </span><span class="s1">TeamDestroy ( Team *team)</span><span class="s5">;</span>
+
+<span class="s2">#endif </span><span class="s0">//EX4_TEAM_H</span>
+</pre>
+</body>
+</html>

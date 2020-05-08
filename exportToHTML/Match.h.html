@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Match.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7ec3e6;}
+.s1 { color: #ebebeb;}
+.s2 { color: #a9b837;}
+.s3 { color: #54b33e;}
+.s4 { color: #ed864a;}
+.s5 { color: #ed864a; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#131314">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Match.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by tal5s on 05/05/2020.</span>
+<span class="s0">//</span>
+<span class="s2">#include </span><span class="s3">&lt;stdbool.h&gt;</span>
+<span class="s2">#include </span><span class="s3">&quot;Team.h&quot;</span>
+<span class="s2">#ifndef </span><span class="s1">EX4_MATCH_H</span>
+<span class="s2">#define </span><span class="s1">EX4_MATCH_H</span>
+
+<span class="s4">typedef struct</span><span class="s1">{</span>
+    <span class="s1">Team* teamHost</span><span class="s5">;</span>
+    <span class="s1">Team* teamGuest</span><span class="s5">;</span>
+    <span class="s4">int </span><span class="s1">goalHost</span><span class="s5">, </span><span class="s1">goalGuest</span><span class="s5">;</span>
+
+<span class="s1">}Match</span><span class="s5">;</span>
+<span class="s1">Match * MatchCreate(Team* teamH</span><span class="s5">, </span><span class="s1">Team* teamG</span><span class="s5">, </span><span class="s4">int </span><span class="s1">goalH</span><span class="s5">, </span><span class="s4">int </span><span class="s1">goalG)</span><span class="s5">;</span>
+<span class="s4">void </span><span class="s1">MatchDestroy(Match * match)</span><span class="s5">;</span>
+
+<span class="s1">bool team_participated(Match *match</span><span class="s5">, </span><span class="s1">Team *team)</span><span class="s5">;</span>
+<span class="s1">bool match_tied(Match* match)</span><span class="s5">;</span>
+<span class="s1">bool team_won(Match* match</span><span class="s5">, </span><span class="s1">Team* team)</span><span class="s5">;</span>
+<span class="s1">bool team_lost(Match* match</span><span class="s5">, </span><span class="s1">Team* team)</span><span class="s5">;</span>
+<span class="s4">int </span><span class="s1">GF(Match* match</span><span class="s5">, </span><span class="s1">Team* team)</span><span class="s5">;</span>
+<span class="s4">int </span><span class="s1">GA(Match* match</span><span class="s5">, </span><span class="s1">Team* team)</span><span class="s5">;</span>
+
+<span class="s2">#endif </span><span class="s0">//EX4_MATCH_H</span>
+</pre>
+</body>
+</html>
