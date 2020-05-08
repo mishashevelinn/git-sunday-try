@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include "League.h"
 #include <string.h>
+#include "sort-league.h" //TODO using this only for MACROS in print function
 
 League *LeagueCreate() {
     League *league;
@@ -95,50 +96,55 @@ void read_matches(League *league, const char *file_name) {
 
 }
 
-int num_wins(League *league, Team *team){
-    int counter =0;
-    for (int i = 0; i <league->num_matches ; ++i) {
-        if(team_participated(league->matches[i], team)&&team_won(league->matches[i], team)){
+int num_wins(League *league, Team *team) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], team) && team_won(league->matches[i], team)) {
             counter++;
         }
-    }return counter;
+    }
+    return counter;
 }
 
-int num_draws(League *league, Team *t){
-    int counter =0;
-    for (int i = 0; i <league->num_matches ; ++i) {
-        if(team_participated(league->matches[i], t) && match_tied(league->matches[i])){
+int num_draws(League *league, Team *t) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], t) && match_tied(league->matches[i])) {
             counter++;
         }
-    }return counter;
+    }
+    return counter;
 }
 
-int num_losses(League *league, Team *team){
-    int counter =0;
-    for (int i = 0; i <league->num_matches ; ++i) {
-        if(team_participated(league->matches[i], team)&&team_lost(league->matches[i], team)){
+int num_losses(League *league, Team *team) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], team) && team_lost(league->matches[i], team)) {
             counter++;
         }
-    }return counter;
+    }
+    return counter;
 }
 
-int num_matches(League *league, Team *team){
-    int counter =0;
-    for (int i = 0; i <league->num_matches ; ++i) {
-        if(team_participated(league->matches[i], team)){
+int num_matches(League *league, Team *team) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], team)) {
             counter++;
         }
-    }return counter;
+    }
+    return counter;
 
 }
 
-int num_GF(League *league, Team *team){
-    int counter =0;
-    for (int i = 0; i <league->num_matches ; ++i) {
-        if(team_participated(league->matches[i], team)){
-            counter+=GF(league->matches[i], team);
+int num_GF(League *league, Team *team) {
+    int counter = 0;
+    for (int i = 0; i < league->num_matches; ++i) {
+        if (team_participated(league->matches[i], team)) {
+            counter += GF(league->matches[i], team);
         }
-    }return counter;
+    }
+    return counter;
 }
 
 int num_GA(League *league, Team *team) {
@@ -150,4 +156,18 @@ int num_GA(League *league, Team *team) {
     }
     return counter;
 }
+
+void print_table(League *league) {
+    for (int j = 0; j < league->num_teams; ++j) {
+        printf("%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n", league->teams[j]->TeamName, num_matches(league, league->teams[j]),
+               num_wins(league, league->teams[j]), num_draws(league, league->teams[j]),
+               num_losses(league, league->teams[j]),
+               num_GF(league, league->teams[j]), num_GA(league, league->teams[j]),
+               num_wins(league, league->teams[j]) * PTS_FOR_WIN
+               + num_draws(league, league->teams[j]) * PTS_FOR_DRAW +
+               num_losses(league, league->teams[j]) * PTS_FOR_LOSS);
+
+    }
+}
+
 

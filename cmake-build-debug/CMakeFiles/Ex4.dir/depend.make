@@ -5,6 +5,7 @@ CMakeFiles/Ex4.dir/League.c.o: ../League.c
 CMakeFiles/Ex4.dir/League.c.o: ../League.h
 CMakeFiles/Ex4.dir/League.c.o: ../Match.h
 CMakeFiles/Ex4.dir/League.c.o: ../Team.h
+CMakeFiles/Ex4.dir/League.c.o: ../sort-league.h
 
 CMakeFiles/Ex4.dir/Match.c.o: ../Match.c
 CMakeFiles/Ex4.dir/Match.c.o: ../Match.h

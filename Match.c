@@ -28,26 +28,27 @@ void MatchDestroy(Match * match){
 }
 
 bool team_participated(Match *match, Team *team) {
-    return (team==match->teamGuest || team == match->teamHost);
+    return ((team->TeamName==match->teamGuest->TeamName) || (team->TeamName == match->teamHost->TeamName));
 }
 
 bool match_tied(Match* match){
     return match->goalGuest==match->goalHost;
 }
-bool team_won(Match* match, Team* team){ //TODO Check the logic here!!!
+bool team_won(Match* match, Team* team){
     if(!team_participated(match, team)){
         printf("Error in file %s, line %d\n", __FILE__, __LINE__);
         printf("Team %s has not participated in match\n", team->TeamName);
         exit(-1);
     }
-    if(match->teamHost.){//comparing structs not goals! and return false when true
-        return true;
+    if(match->goalHost==match->goalGuest){
+        return false;
     }
-    else if(match->goalHost>match->goalGuest){
-        return team == match->teamGuest;
+    if(match->goalGuest>match->goalHost){
+        return match->teamGuest->TeamName==team->TeamName;
+        }
+    return match->teamHost->TeamName==team->TeamName;
     }
-    return false;
-}
+
 
 bool team_lost(Match* match, Team* team) {
     if (!team_participated(match, team)) {
