@@ -17,12 +17,23 @@ League *LeagueCreate() {
         exit(1);
     }
     league->teams = (Team **) malloc(sizeof(Team));
+    if (league->teams == NULL) {
+        printf("Failed to allocate %lu bytes\n", sizeof(Team));
+        exit(1);
+    }
     league->matches = (Match **) malloc(sizeof(Match));
+    if (league->matches == NULL) {
+        printf("Failed to allocate %lu bytes\n", sizeof(Match));
+        exit(1);
+    }
+
     return league;
 }
 
 void LeagueDestroy(League *league) {
     free(league);
+    free(league->teams);
+    free(league->matches);
 }
 
 void read_teams(League *league, const char *file_name) {
@@ -36,7 +47,7 @@ void read_teams(League *league, const char *file_name) {
         fprintf(stderr, "error in line %d, failed to open a file\n", __LINE__);
         exit(-1);
     }
-    while ((getline(&line, &size, fp)) != EOF) {
+    while ((len = getline(&line, &size, fp)) != EOF) {
         line[len - 1] = 0;
         league->teams = (Team **) realloc(league->teams, sizeof(Team)*(league->numTeams));
         league->teams[league->numTeams] = TeamCreate(line);
@@ -58,37 +69,28 @@ void read_matches(League *league, const char *file_name) {
     char ptrG[30];
     int goalH = -1;
     int goalG = -1;
-    printf("OK1, ptrH: %s, ptrG: %s, goalH: %d, goalG: %d\n", ptrH, ptrG, goalH, goalG);
     while ((len = fscanf(fp, "%s\t%s\t%d\t%d", ptrH, ptrG, &goalH, &goalG)) != EOF) {
-        printf("Try NO%d, return value from scan: %d\n", league->numMatches + 1, len);
         if (len != 4) {
             printf("line %d in file is not in expected format", league->numMatches + 1);
             exit(1);
         }
-
-        printf("OK2, ptrH: %s, ptrG: %s, goalH: %d, goalG: %d\n", ptrH, ptrG, goalH, goalG);
-        league->matches = (Match **) realloc(league->matches, sizeof(Match));
+        league->matches = (Match **) realloc(league->matches, sizeof(Match)*league->numMatches);
         Team *teamH = NULL;
         Team *teamG = NULL;
         for (int i = 0; i < league->numTeams; i++) {
-            printf("OK3, ptrH: %s, ptrG: %s, goalH: %d, goalG: %d\n", ptrH, ptrG, goalH, goalG);
             if (!strcmp((league->teams[i]->TeamName), ptrH)) {
                 teamH = league->teams[i];
-                printf("OK4, %d\n", i);
             } else if (!strcmp((league->teams[i]->TeamName), ptrG)) {
                 teamG = league->teams[i];
-                printf("OK5, %d\n", i);
             }
             if (teamH != NULL && teamG != NULL) {
-                printf("OK6, %d\n", i);
                 break;
             }
         }
-        printf("H: %s, G: %s----> %d:%d\n", teamH->TeamName, teamG->TeamName, goalH, goalG);
+        //printf("H: %s, G: %s----> %d:%d\n", teamH->TeamName, teamG->TeamName, goalH, goalG);
         league->matches[league->numMatches] = MatchCreate(teamH, teamG, goalH, goalG);
-        printf("%s\n", league->matches[league->numMatches]->teamHost->TeamName);
+        //printf("%s\n", league->matches[league->numMatches]->teamHost->TeamName);
         league->numMatches++;
     }
-    fclose(fp);
-    printf("%s\n", league->matches[0]->teamHost->TeamName);
+    //printf("%s\n", league->matches[0]->teamHost->TeamName);
 }
