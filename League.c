@@ -158,8 +158,9 @@ int num_GA(League *league, Team *team) {
 }
 
 void print_table(League *league) {
+    printf("Team\t\t\tGames\t\tWins\t\tTies\t\tLosses\t\tGF\t\t\tGA\t\t\tPoints\n");
     for (int j = 0; j < league->num_teams; ++j) {
-        printf("%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n", league->teams[j]->TeamName, num_matches(league, league->teams[j]),
+        printf("%-10s\t\t%-10d\t%-10d\t%-10d\t%-10d\t%-10d\t%-10d\t%-10d\n", league->teams[j]->TeamName, num_matches(league, league->teams[j]),
                num_wins(league, league->teams[j]), num_draws(league, league->teams[j]),
                num_losses(league, league->teams[j]),
                num_GF(league, league->teams[j]), num_GA(league, league->teams[j]),
