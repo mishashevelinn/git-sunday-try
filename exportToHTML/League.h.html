@@ -31,7 +31,7 @@ League.h</font>
 
 
 <span class="s4">typedef struct </span><span class="s1">{</span>
-    <span class="s4">int </span><span class="s1">numMatches</span><span class="s5">, </span><span class="s1">numTeams</span><span class="s5">;</span>
+    <span class="s4">int </span><span class="s1">num_matches</span><span class="s5">, </span><span class="s1">num_teams</span><span class="s5">;</span>
     <span class="s1">Team **teams</span><span class="s5">;</span>
     <span class="s1">Match **matches</span><span class="s5">;</span>
 <span class="s1">} League</span><span class="s5">;</span>
@@ -46,7 +46,7 @@ League.h</font>
 
 <span class="s4">int </span><span class="s1">num_wins(League *league</span><span class="s5">, </span><span class="s1">Team *t)</span><span class="s5">;</span>
 
-<span class="s4">int </span><span class="s1">num_ties(League *league</span><span class="s5">, </span><span class="s1">Team *t)</span><span class="s5">;</span>
+<span class="s4">int </span><span class="s1">num_draws(League *league</span><span class="s5">, </span><span class="s1">Team *t)</span><span class="s5">;</span>
 
 <span class="s4">int </span><span class="s1">num_losses(League *league</span><span class="s5">, </span><span class="s1">Team *t)</span><span class="s5">;</span>
 

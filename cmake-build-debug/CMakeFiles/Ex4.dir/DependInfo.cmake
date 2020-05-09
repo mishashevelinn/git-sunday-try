@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/tal5s/CLionProjects/Ex4/League.c" "C:/Users/tal5s/CLionProjects/Ex4/cmake-build-debug/CMakeFiles/Ex4.dir/League.c.obj"
-  "C:/Users/tal5s/CLionProjects/Ex4/Match.c" "C:/Users/tal5s/CLionProjects/Ex4/cmake-build-debug/CMakeFiles/Ex4.dir/Match.c.obj"
-  "C:/Users/tal5s/CLionProjects/Ex4/Team.c" "C:/Users/tal5s/CLionProjects/Ex4/cmake-build-debug/CMakeFiles/Ex4.dir/Team.c.obj"
-  "C:/Users/tal5s/CLionProjects/Ex4/main.c" "C:/Users/tal5s/CLionProjects/Ex4/cmake-build-debug/CMakeFiles/Ex4.dir/main.c.obj"
+  "/home/misha/CLionProjects/tal-git/League.c" "/home/misha/CLionProjects/tal-git/cmake-build-debug/CMakeFiles/Ex4.dir/League.c.o"
+  "/home/misha/CLionProjects/tal-git/Match.c" "/home/misha/CLionProjects/tal-git/cmake-build-debug/CMakeFiles/Ex4.dir/Match.c.o"
+  "/home/misha/CLionProjects/tal-git/Team.c" "/home/misha/CLionProjects/tal-git/cmake-build-debug/CMakeFiles/Ex4.dir/Team.c.o"
+  "/home/misha/CLionProjects/tal-git/main.c" "/home/misha/CLionProjects/tal-git/cmake-build-debug/CMakeFiles/Ex4.dir/main.c.o"
+  "/home/misha/CLionProjects/tal-git/sort-league.c" "/home/misha/CLionProjects/tal-git/cmake-build-debug/CMakeFiles/Ex4.dir/sort-league.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

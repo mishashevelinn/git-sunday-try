@@ -46,7 +46,7 @@ League.c</font>
 
 <span class="s5">void </span><span class="s1">read_teams(League *league</span><span class="s4">, </span><span class="s5">const char </span><span class="s1">*file_name) {</span>
     <span class="s1">league-&gt;teams = NULL</span><span class="s4">;</span>
-    <span class="s1">league-&gt;numTeams = </span><span class="s6">0</span><span class="s4">;</span>
+    <span class="s1">league-&gt;num_teams = </span><span class="s6">0</span><span class="s4">;</span>
     <span class="s1">FILE *fp = fopen(file_name</span><span class="s4">, </span><span class="s3">&quot;r&quot;</span><span class="s1">)</span><span class="s4">;</span>
     <span class="s5">if </span><span class="s1">(!fp) {</span>
         <span class="s1">fprintf(stderr</span><span class="s4">, </span><span class="s3">&quot;error in line %d, failed to open a file</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">__LINE__)</span><span class="s4">;</span>
@@ -59,15 +59,15 @@ League.c</font>
     <span class="s5">while </span><span class="s1">((len = getline(&amp;line</span><span class="s4">, </span><span class="s1">&amp;size</span><span class="s4">, </span><span class="s1">fp)) != EOF) {</span>
         <span class="s1">line[len - </span><span class="s6">1</span><span class="s1">] = </span><span class="s6">0</span><span class="s4">;</span>
         <span class="s1">league-&gt;teams = (Team **) realloc(league-&gt;teams</span><span class="s4">, </span><span class="s5">sizeof</span><span class="s1">(Team))</span><span class="s4">;</span>
-        <span class="s1">league-&gt;teams[league-&gt;numTeams] = TeamCreate(line)</span><span class="s4">;</span>
-        <span class="s1">league-&gt;numTeams++</span><span class="s4">;</span>
+        <span class="s1">league-&gt;teams[league-&gt;num_teams] = TeamCreate(line)</span><span class="s4">;</span>
+        <span class="s1">league-&gt;num_teams++</span><span class="s4">;</span>
     <span class="s1">}</span>
     <span class="s1">fclose(fp)</span><span class="s4">;</span>
 <span class="s1">}</span>
 
 <span class="s5">void </span><span class="s1">read_matches(League *league</span><span class="s4">, </span><span class="s5">const char </span><span class="s1">*file_name) {</span>
     <span class="s1">league-&gt;matches = NULL</span><span class="s4">;</span>
-    <span class="s1">league-&gt;numMatches = </span><span class="s6">0</span><span class="s4">;</span>
+    <span class="s1">league-&gt;num_matches = </span><span class="s6">0</span><span class="s4">;</span>
     <span class="s1">FILE *fp = fopen(file_name</span><span class="s4">, </span><span class="s3">&quot;r&quot;</span><span class="s1">)</span><span class="s4">;</span>
     <span class="s5">if </span><span class="s1">(!fp) {</span>
         <span class="s1">fprintf(stderr</span><span class="s4">, </span><span class="s3">&quot;error in line %d, failed to open a file</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">__LINE__)</span><span class="s4">;</span>
@@ -80,9 +80,9 @@ League.c</font>
     <span class="s5">int </span><span class="s1">goalG = -</span><span class="s6">1</span><span class="s4">;</span>
     <span class="s1">printf(</span><span class="s3">&quot;OK1, ptrH: %s, ptrG: %s, goalH: %d, goalG: %d</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">ptrH</span><span class="s4">, </span><span class="s1">ptrG</span><span class="s4">, </span><span class="s1">goalH</span><span class="s4">, </span><span class="s1">goalG)</span><span class="s4">;</span>
     <span class="s5">while </span><span class="s1">((len = fscanf(fp</span><span class="s4">, </span><span class="s3">&quot;%s</span><span class="s5">\t</span><span class="s3">%s</span><span class="s5">\t</span><span class="s3">%d</span><span class="s5">\t</span><span class="s3">%d&quot;</span><span class="s4">, </span><span class="s1">ptrH</span><span class="s4">, </span><span class="s1">ptrG</span><span class="s4">, </span><span class="s1">&amp;goalH</span><span class="s4">, </span><span class="s1">&amp;goalG)) != EOF) {</span>
-        <span class="s1">printf(</span><span class="s3">&quot;Try NO%d, return value from scan: %d</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">league-&gt;numMatches + </span><span class="s6">1</span><span class="s4">, </span><span class="s1">len)</span><span class="s4">;</span>
+        <span class="s1">printf(</span><span class="s3">&quot;Try NO%d, return value from scan: %d</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">league-&gt;num_matches + </span><span class="s6">1</span><span class="s4">, </span><span class="s1">len)</span><span class="s4">;</span>
         <span class="s5">if </span><span class="s1">(len != </span><span class="s6">4</span><span class="s1">) {</span>
-            <span class="s1">fprintf(stderr</span><span class="s4">, </span><span class="s3">&quot;line %d in file is not in expected format&quot;</span><span class="s4">, </span><span class="s1">league-&gt;numMatches + </span><span class="s6">1</span><span class="s1">)</span><span class="s4">;</span>
+            <span class="s1">fprintf(stderr</span><span class="s4">, </span><span class="s3">&quot;line %d in file is not in expected format&quot;</span><span class="s4">, </span><span class="s1">league-&gt;num_matches + </span><span class="s6">1</span><span class="s1">)</span><span class="s4">;</span>
             <span class="s1">exit(</span><span class="s6">1</span><span class="s1">)</span><span class="s4">;</span>
         <span class="s1">}</span>
 
@@ -90,7 +90,7 @@ League.c</font>
         <span class="s1">league-&gt;matches = (Match **) realloc(league-&gt;matches</span><span class="s4">, </span><span class="s5">sizeof</span><span class="s1">(Match))</span><span class="s4">;</span>
         <span class="s1">Team *teamH = NULL</span><span class="s4">;</span>
         <span class="s1">Team *teamG = NULL</span><span class="s4">;</span>
-        <span class="s5">for </span><span class="s1">(</span><span class="s5">int </span><span class="s1">i = </span><span class="s6">0</span><span class="s4">; </span><span class="s1">i &lt; league-&gt;numTeams</span><span class="s4">; </span><span class="s1">i++) {</span>
+        <span class="s5">for </span><span class="s1">(</span><span class="s5">int </span><span class="s1">i = </span><span class="s6">0</span><span class="s4">; </span><span class="s1">i &lt; league-&gt;num_teams</span><span class="s4">; </span><span class="s1">i++) {</span>
             <span class="s1">printf(</span><span class="s3">&quot;OK3, ptrH: %s, ptrG: %s, goalH: %d, goalG: %d</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">ptrH</span><span class="s4">, </span><span class="s1">ptrG</span><span class="s4">, </span><span class="s1">goalH</span><span class="s4">, </span><span class="s1">goalG)</span><span class="s4">;</span>
             <span class="s5">if </span><span class="s1">(strcmp((league-&gt;teams[i]-&gt;TeamName)</span><span class="s4">, </span><span class="s1">ptrH) == </span><span class="s6">0</span><span class="s1">) {</span>
                 <span class="s1">teamH = league-&gt;teams[i]</span><span class="s4">;</span>
@@ -105,9 +105,9 @@ League.c</font>
             <span class="s1">}</span>
         <span class="s1">}</span>
         <span class="s1">printf(</span><span class="s3">&quot;H: %s, G: %s----&gt; %d:%d</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">teamH-&gt;TeamName</span><span class="s4">, </span><span class="s1">teamG-&gt;TeamName</span><span class="s4">, </span><span class="s1">goalH</span><span class="s4">, </span><span class="s1">goalG)</span><span class="s4">;</span>
-        <span class="s1">league-&gt;matches[league-&gt;numMatches] = MatchCreate(teamH</span><span class="s4">, </span><span class="s1">teamG</span><span class="s4">, </span><span class="s1">goalH</span><span class="s4">, </span><span class="s1">goalG)</span><span class="s4">;</span>
-        <span class="s1">printf(</span><span class="s3">&quot;%s</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">league-&gt;matches[league-&gt;numMatches]-&gt;teamHost-&gt;TeamName)</span><span class="s4">;</span>
-        <span class="s1">league-&gt;numMatches++</span><span class="s4">;</span>
+        <span class="s1">league-&gt;matches[league-&gt;num_matches] = MatchCreate(teamH</span><span class="s4">, </span><span class="s1">teamG</span><span class="s4">, </span><span class="s1">goalH</span><span class="s4">, </span><span class="s1">goalG)</span><span class="s4">;</span>
+        <span class="s1">printf(</span><span class="s3">&quot;%s</span><span class="s5">\n</span><span class="s3">&quot;</span><span class="s4">, </span><span class="s1">league-&gt;matches[league-&gt;num_matches]-&gt;teamHost-&gt;TeamName)</span><span class="s4">;</span>
+        <span class="s1">league-&gt;num_matches++</span><span class="s4">;</span>
         <span class="s0">//len = fscanf(fp, &quot;%s\t%s\t%d\t%d&quot;, ptrH, ptrG, &amp;goalH, &amp;goalG);</span>
     <span class="s1">}</span>
     <span class="s1">fclose(fp)</span><span class="s4">;</span>

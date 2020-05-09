@@ -35,11 +35,11 @@ main.c</font>
 
     <span class="s0">League* liga1= LeagueCreate()</span><span class="s5">;</span>
     <span class="s0">read_teams(liga1</span><span class="s5">, </span><span class="s2">&quot;teams.txt&quot;</span><span class="s0">)</span><span class="s5">;</span>
-    <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s5">; </span><span class="s0">i&lt;liga1-&gt;numTeams</span><span class="s5">; </span><span class="s0">i++){</span>
+    <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s5">; </span><span class="s0">i&lt;liga1-&gt;num_teams</span><span class="s5">; </span><span class="s0">i++){</span>
         <span class="s0">printf(</span><span class="s2">&quot;Team: %s</span><span class="s3">\n</span><span class="s2">&quot;</span><span class="s5">, </span><span class="s0">(liga1-&gt;teams[i]-&gt;TeamName))</span><span class="s5">;</span>
     <span class="s0">}</span>
     <span class="s0">read_matches(liga1</span><span class="s5">, </span><span class="s2">&quot;matches.txt&quot;</span><span class="s0">)</span><span class="s5">;</span>
-    <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s5">; </span><span class="s0">i&lt;(liga1-&gt;numMatches)</span><span class="s5">; </span><span class="s0">i++){</span>
+    <span class="s3">for</span><span class="s0">(</span><span class="s3">int </span><span class="s0">i=</span><span class="s6">0</span><span class="s5">; </span><span class="s0">i&lt;(liga1-&gt;num_matches)</span><span class="s5">; </span><span class="s0">i++){</span>
         <span class="s0">printf(</span><span class="s2">&quot;Match%d %s against %s - %d:%d</span><span class="s3">\n</span><span class="s2">&quot;</span><span class="s5">,</span><span class="s0">i+</span><span class="s6">1</span><span class="s5">, </span><span class="s0">liga1-&gt;matches[i]-&gt;teamHost-&gt;TeamName</span><span class="s5">,</span><span class="s0">liga1-&gt;matches[i]-&gt;teamGuest-&gt;TeamName</span><span class="s5">,</span>
                <span class="s0">liga1-&gt;matches[i]-&gt;goalHost</span><span class="s5">,</span><span class="s0">liga1-&gt;matches[i]-&gt;goalGuest)</span><span class="s5">;</span>
     <span class="s0">}</span>

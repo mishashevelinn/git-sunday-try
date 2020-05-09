@@ -12,7 +12,7 @@
 
 
 typedef struct {
-    int numMatches, numTeams;
+    int num_matches, num_teams;
     Team **teams;
     Match **matches;
 } League;
@@ -27,10 +27,10 @@ void read_matches(League *league, const char *file_name);
 
 int num_wins(League *league, Team *t);
 
-int num_ties(League *league, Team *t);
+int num_draws(League *league, Team *t);
 
 int num_losses(League *league, Team *t);
-
+//returns number of matches given team participated in
 int num_matches(League *league, Team *t);
 
 int num_GF(League *league, Team *t);
