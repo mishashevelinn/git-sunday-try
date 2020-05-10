@@ -13,6 +13,7 @@ int main() {
     read_matches(liga1, "matches.txt");
     sort_league(liga1);
     print_table(liga1);
+    printf("change");
 
 
     return 0;
