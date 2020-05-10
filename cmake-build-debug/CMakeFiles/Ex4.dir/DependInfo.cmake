@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/misha/CLionProjects/git-sunday-try2/League.c" "/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/League.c.o"
-  "/home/misha/CLionProjects/git-sunday-try2/Match.c" "/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/Match.c.o"
-  "/home/misha/CLionProjects/git-sunday-try2/Team.c" "/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/Team.c.o"
-  "/home/misha/CLionProjects/git-sunday-try2/main.c" "/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/main.c.o"
-  "/home/misha/CLionProjects/git-sunday-try2/sort-league.c" "/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/sort-league.c.o"
+  "/home/misha/CLionProjects/git-sunday-evening/League.c" "/home/misha/CLionProjects/git-sunday-evening/cmake-build-debug/CMakeFiles/Ex4.dir/League.c.o"
+  "/home/misha/CLionProjects/git-sunday-evening/Match.c" "/home/misha/CLionProjects/git-sunday-evening/cmake-build-debug/CMakeFiles/Ex4.dir/Match.c.o"
+  "/home/misha/CLionProjects/git-sunday-evening/Team.c" "/home/misha/CLionProjects/git-sunday-evening/cmake-build-debug/CMakeFiles/Ex4.dir/Team.c.o"
+  "/home/misha/CLionProjects/git-sunday-evening/main.c" "/home/misha/CLionProjects/git-sunday-evening/cmake-build-debug/CMakeFiles/Ex4.dir/main.c.o"
+  "/home/misha/CLionProjects/git-sunday-evening/sort-league.c" "/home/misha/CLionProjects/git-sunday-evening/cmake-build-debug/CMakeFiles/Ex4.dir/sort-league.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
