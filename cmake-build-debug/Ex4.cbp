@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/misha/CLionProjects/git-sunday1/cmake-build-debug"/>
+				<Option working_dir="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/misha/CLionProjects/git-sunday1/cmake-build-debug"/>
+				<Option working_dir="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/misha/CLionProjects/git-sunday1/cmake-build-debug"/>
+				<Option working_dir="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ex4">
-				<Option output="/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Ex4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/misha/CLionProjects/git-sunday1/cmake-build-debug"/>
+				<Option output="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Ex4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex4"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex4"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Ex4/fast">
-				<Option output="/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Ex4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/misha/CLionProjects/git-sunday1/cmake-build-debug"/>
+				<Option output="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Ex4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,41 +71,41 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex4/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Ex4/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/League.c">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/League.c">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/League.h">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/League.h">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/Match.c">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/Match.c">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/Match.h">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/Match.h">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/Team.c">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/Team.c">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/Team.h">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/Team.h">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/main.c">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/main.c">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/sort-league.c">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/sort-league.c">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/sort-league.h">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/sort-league.h">
 			<Option target="Ex4"/>
 		</Unit>
-		<Unit filename="/home/misha/CLionProjects/git-sunday1/CMakeLists.txt">
+		<Unit filename="/home/misha/CLionProjects/git-sunday-try2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

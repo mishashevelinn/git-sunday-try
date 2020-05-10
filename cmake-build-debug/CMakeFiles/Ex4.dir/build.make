@@ -43,10 +43,10 @@ RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/misha/CLionProjects/git-sunday1
+CMAKE_SOURCE_DIR = /home/misha/CLionProjects/git-sunday-try2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/misha/CLionProjects/git-sunday1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/misha/CLionProjects/git-sunday-try2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Ex4.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/Ex4.dir/flags.make
 
 CMakeFiles/Ex4.dir/main.c.o: CMakeFiles/Ex4.dir/flags.make
 CMakeFiles/Ex4.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex4.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/main.c.o   -c /home/misha/CLionProjects/git-sunday1/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex4.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/main.c.o   -c /home/misha/CLionProjects/git-sunday-try2/main.c
 
 CMakeFiles/Ex4.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex4.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday1/main.c > CMakeFiles/Ex4.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday-try2/main.c > CMakeFiles/Ex4.dir/main.c.i
 
 CMakeFiles/Ex4.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex4.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday1/main.c -o CMakeFiles/Ex4.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday-try2/main.c -o CMakeFiles/Ex4.dir/main.c.s
 
 CMakeFiles/Ex4.dir/Team.c.o: CMakeFiles/Ex4.dir/flags.make
 CMakeFiles/Ex4.dir/Team.c.o: ../Team.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex4.dir/Team.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/Team.c.o   -c /home/misha/CLionProjects/git-sunday1/Team.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex4.dir/Team.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/Team.c.o   -c /home/misha/CLionProjects/git-sunday-try2/Team.c
 
 CMakeFiles/Ex4.dir/Team.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex4.dir/Team.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday1/Team.c > CMakeFiles/Ex4.dir/Team.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday-try2/Team.c > CMakeFiles/Ex4.dir/Team.c.i
 
 CMakeFiles/Ex4.dir/Team.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex4.dir/Team.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday1/Team.c -o CMakeFiles/Ex4.dir/Team.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday-try2/Team.c -o CMakeFiles/Ex4.dir/Team.c.s
 
 CMakeFiles/Ex4.dir/Match.c.o: CMakeFiles/Ex4.dir/flags.make
 CMakeFiles/Ex4.dir/Match.c.o: ../Match.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Ex4.dir/Match.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/Match.c.o   -c /home/misha/CLionProjects/git-sunday1/Match.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Ex4.dir/Match.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/Match.c.o   -c /home/misha/CLionProjects/git-sunday-try2/Match.c
 
 CMakeFiles/Ex4.dir/Match.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex4.dir/Match.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday1/Match.c > CMakeFiles/Ex4.dir/Match.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday-try2/Match.c > CMakeFiles/Ex4.dir/Match.c.i
 
 CMakeFiles/Ex4.dir/Match.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex4.dir/Match.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday1/Match.c -o CMakeFiles/Ex4.dir/Match.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday-try2/Match.c -o CMakeFiles/Ex4.dir/Match.c.s
 
 CMakeFiles/Ex4.dir/League.c.o: CMakeFiles/Ex4.dir/flags.make
 CMakeFiles/Ex4.dir/League.c.o: ../League.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Ex4.dir/League.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/League.c.o   -c /home/misha/CLionProjects/git-sunday1/League.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Ex4.dir/League.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/League.c.o   -c /home/misha/CLionProjects/git-sunday-try2/League.c
 
 CMakeFiles/Ex4.dir/League.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex4.dir/League.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday1/League.c > CMakeFiles/Ex4.dir/League.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday-try2/League.c > CMakeFiles/Ex4.dir/League.c.i
 
 CMakeFiles/Ex4.dir/League.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex4.dir/League.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday1/League.c -o CMakeFiles/Ex4.dir/League.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday-try2/League.c -o CMakeFiles/Ex4.dir/League.c.s
 
 CMakeFiles/Ex4.dir/sort-league.c.o: CMakeFiles/Ex4.dir/flags.make
 CMakeFiles/Ex4.dir/sort-league.c.o: ../sort-league.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Ex4.dir/sort-league.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/sort-league.c.o   -c /home/misha/CLionProjects/git-sunday1/sort-league.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Ex4.dir/sort-league.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Ex4.dir/sort-league.c.o   -c /home/misha/CLionProjects/git-sunday-try2/sort-league.c
 
 CMakeFiles/Ex4.dir/sort-league.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex4.dir/sort-league.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday1/sort-league.c > CMakeFiles/Ex4.dir/sort-league.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/misha/CLionProjects/git-sunday-try2/sort-league.c > CMakeFiles/Ex4.dir/sort-league.c.i
 
 CMakeFiles/Ex4.dir/sort-league.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex4.dir/sort-league.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday1/sort-league.c -o CMakeFiles/Ex4.dir/sort-league.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/misha/CLionProjects/git-sunday-try2/sort-league.c -o CMakeFiles/Ex4.dir/sort-league.c.s
 
 # Object files for target Ex4
 Ex4_OBJECTS = \
@@ -140,7 +140,7 @@ Ex4: CMakeFiles/Ex4.dir/League.c.o
 Ex4: CMakeFiles/Ex4.dir/sort-league.c.o
 Ex4: CMakeFiles/Ex4.dir/build.make
 Ex4: CMakeFiles/Ex4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Ex4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Ex4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ex4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/Ex4.dir/clean:
 .PHONY : CMakeFiles/Ex4.dir/clean
 
 CMakeFiles/Ex4.dir/depend:
-	cd /home/misha/CLionProjects/git-sunday1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/misha/CLionProjects/git-sunday1 /home/misha/CLionProjects/git-sunday1 /home/misha/CLionProjects/git-sunday1/cmake-build-debug /home/misha/CLionProjects/git-sunday1/cmake-build-debug /home/misha/CLionProjects/git-sunday1/cmake-build-debug/CMakeFiles/Ex4.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/misha/CLionProjects/git-sunday-try2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/misha/CLionProjects/git-sunday-try2 /home/misha/CLionProjects/git-sunday-try2 /home/misha/CLionProjects/git-sunday-try2/cmake-build-debug /home/misha/CLionProjects/git-sunday-try2/cmake-build-debug /home/misha/CLionProjects/git-sunday-try2/cmake-build-debug/CMakeFiles/Ex4.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Ex4.dir/depend
 
